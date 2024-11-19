@@ -1,0 +1,18 @@
+int solve(string s, string t)
+{
+	int tp = 0;
+	int sp = 0;
+	int taken = 0;
+
+	while (sp < s.length() && tp < t.length())
+	{
+		if(s[sp] == t[tp])
+		{
+			taken++;
+			tp++;
+		}
+		sp++;
+	}
+
+	return (int)s.length() - taken + (int)t.length() - taken;
+}
